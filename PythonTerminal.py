@@ -58,6 +58,8 @@ def UpdateTerminal():
         yPos = 0
         for ldx,l in enumerate(lineList):
             yPos = l.Draw(window, font, yPos, cam)
+        if yPos-cam.yPos > screeny - FONT_SIZE * 2:
+            cam.yPos += FONT_SIZE * 2
         pygame.display.update()
 
 
